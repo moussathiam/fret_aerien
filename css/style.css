@@ -12,21 +12,19 @@
 
 
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
-
+/*
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
-@import url(slick.css);
-@import url(jquery-ui.css);
-@import url(nice-select.css);
+*/
+/*@import url(slick.css);*/
+/*@import url(jquery-ui.css);*/
+/*@import url(nice-select.css);*/
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
-* {
-     box-sizing: border-box !important;
-     transition: ease all 0.5s;
-}
+
 
 html {
      scroll-behavior: smooth;
@@ -164,22 +162,7 @@ img {
      font-size: 16px;
 }
 
-.lead {
-     font-size: 18px;
-     line-height: 30px;
-     color: #767676;
-     margin: 0;
-     padding: 0;
-}
 
-.form-control:focus {
-     border-color: #ffffff !important;
-     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
-}
-
-.navbar-form input {
-     border: none !important;
-}
 
 .badge {
      font-weight: 500;
@@ -716,19 +699,7 @@ ul.top_icon li a {
      border-radius: 0;
 }
 
-#login-modal .modal-content .modal-body .form-group input {
-     background: #ffffff;
-     border: 1px solid #c8c8c8;
-     border-radius: 0px;
-}
 
-#login-modal .modal-content .modal-body .form-group input:focus {
-     border: 1px solid #c8c8c8 !important;
-}
-
-#login-modal .modal-content form {
-     margin-bottom: 10px;
-}
 
 .modal-title {
      padding: 0px;
@@ -1548,19 +1519,6 @@ a.slide_banner:hover::before {
 .heroslider .swiper-pagination .swiper-pagination-bullet {
      opacity: 1;
 }
-input[type="checkbox"].styled:checked+label:after,
-input[type="radio"].styled:checked+label:after {
-     font-family: 'FontAwesome';
-     content: "\f00c";
-}
-input[type="checkbox"] .styled:checked+label::before,
-input[type="radio"] .styled:checked+label::before {
-     color: #fff;
-}
-input[type="checkbox"] .styled:checked+label::after,
-input[type="radio"] .styled:checked+label::after {
-     color: #fff;
-}
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
@@ -1575,7 +1533,7 @@ position: relative;}
 .location_icon_bottum::before {
      position: absolute;
 content: "";
-top: 11px;
+top: 5px;
 background: url(../icon/wfe4.png);
 background-repeat: repeat;
 width: 50px;
@@ -1700,70 +1658,6 @@ color: #fff;
 }
 /** end banner **/
 
-/** about **/
-.about {
-     padding-top: 90px ;
-     padding-bottom: 84px ;
-     background: url(../images/aboutbg.jpg);
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-
-.about .about_img figure {
-     margin: 0px;
-}
-
-.about .about_box {
-     text-align: right;
-     padding-top: 130px;
-}
-
-.about .about_box h3 {
-     font-weight: bold;
-     font-size: 30px;
-     color: #888687;
-     line-height: 32px;
-     padding-bottom: 7px;
-    display: block;
-}
-
-.about .about_box span {
-     font-weight: bold;
-     font-size: 50px;
-     line-height: 58px;
-     color:#23242a; 
-     padding-bottom: 10px;
-display: block
-}
-
-.about .about_box p {
-     font-size: 17px;
-     line-height: 30px;
-     color: #23242a;
-}
-
-.about_box_ span {
-     font-weight: bold;
-     font-size: 50px;
-     line-height: 58px;
-     color:#23242a; 
-     padding-bottom: 10px;
-display: block
-}
-
-.about_box_ { text-align: left;
-     padding-top: 130px;}
-
-.about_box_ p {
-     font-size: 17px;
-     line-height: 30px;
-     color: #23242a;
-}
 /** end about **/
 
 .clients {
@@ -1829,11 +1723,6 @@ border-radius: 50px;
 
 
      
-
-
-
-
-
 
 /** brand **/
 .brand {
@@ -1927,17 +1816,8 @@ margin-top: 40px
     padding: 40px;
 } 
 
-.form-control {
-     border: #ff0000 solid 2px;
-     border-radius: inherit;
-     margin-bottom: 30px;
-     padding: 13px 20px;
-     font-family: poppins;
-}
-.form-control:focus {
-     box-shadow: inherit;
-     border: #ff0000 solid 2px !important;
-}
+
+
 
 .textarea {
      font-family: poppins;
@@ -2163,3 +2043,173 @@ ul.location_icon span {
 .special-page .relative  {text-align:center !important; }
 
 .special-page .footer {margin-top: 90px;}
+
+
+/************************************************SIMULATEUR*******/
+.simulateur
+{
+     background-image: url("../images/background2.jpg");
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     background-position: center top;
+     padding-top: 60px;
+     padding-bottom: 60px;
+}
+.simulateur form
+{ 
+     background-color: white;
+     padding-bottom: 25px;
+     margin-bottom: 20px;
+     box-shadow: 0px 0px 10px 1px #aaa;
+}
+.simulateur form legend
+{
+     background-color: #0066b3;
+     border: none;
+     box-shadow: 0px 2px 2px 1px #b5b5ba;
+     color: white;
+     text-align: center;
+     padding: 10px;
+     margin-bottom: 15px;
+}
+.simulateur .sub-div
+{
+     margin: 20px;
+     padding: 15px;
+     box-shadow: 0px 0px 5px 1px #b5b5ba;
+     border-radius: 5px;
+     background-color: #fafaff;
+}
+.simulateur form .sub-div > div > label
+{
+     color: #0066b3;
+     font-weight: 600;
+}
+.simulateur form > fieldset > div > input:focus
+{
+     border: 2px solid #ccf!important;
+     box-shadow: none;
+}
+.simulateur form > fieldset > div > select:focus
+{
+     border: 2px solid #ccf!important;
+     box-shadow: none;
+}
+/************************************************FIN SIMULATEUR*******/
+
+/************************************************RESULTAT*******/
+.canva-resultat
+{
+     padding: 0px!important;
+     min-height: 450px;
+}
+.resultat
+{
+     background-color: white;
+     padding-bottom: 25px;
+     box-shadow: 0px 0px 10px 1px #aaa;
+}
+.simulateur .resultat > .title-result
+{
+     display: block;
+     border: none;
+     box-shadow: 0px 2px 2px 1px #b5b5ba;
+     background-color: #555;
+     color: white;
+     font-size: 20px;
+     text-align: center;
+     padding: 13px;
+     margin-bottom: 20px;
+}
+.simulateur table
+{
+     padding: 10px;
+     width: 90%;
+     margin: auto;
+     text-align: right;
+}
+.simulateur table tr td
+{
+     padding: 15px;
+}
+.simulateur table tr td:first-child
+{
+     text-align: left;
+}
+.simulateur table tr td:last-child
+{
+     background-color: #fafafa;
+}
+
+.simulateur table .tab-bold
+{
+     font-weight: bold;
+}
+.simulateur table .tr-total-ht, .simulateur table .tr-total-ttc
+{
+     background-color: #fafafa;
+     border-top: 1px solid blue !important;
+     color: #006693;
+}
+.simulateur table .tr-total-ttc
+{
+     border-bottom: 2px solid #006693;
+}
+.simulateur table .tr-total-ht .somme, .simulateur table .tr-total-ttc .somme
+{
+     background-color: #ddf;
+     font-size: 15px;
+      color: #006693;
+}
+.simulateur table .tr-total-ttc .somme
+{
+     color: white;
+     background-color: #006693;
+}
+.simulateur .div-button
+{
+     text-align: right;
+     margin: 20px;
+     margin-top: 20px;
+     margin-bottom: 0px;
+}
+.simulateur .div-button .btn
+{
+     background-color: #0066b3;
+     width: 50%;
+}
+.simulateur .div-button .btn:hover
+{
+     box-shadow: 0px 0px 10px 2px #aaa;
+     background-color: #0066c3;
+}
+.simulateur .div-button .btn:focus
+{
+     box-shadow: 0px 0px 10px 2px black;
+     background-color: #0000ff
+}
+select
+{
+     border: 1px solid red !important;
+     height: 35px !important;
+}
+
+select .dropdown-toggle:focus {
+    outline: none!important;
+    outline: none!important;
+    outline-offset: 0px;
+}
+/************************************************FIN RESULTAT*******/
+
+
+
+.separation
+{
+     background-image: url("../images/background3.jpg");
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     background-position: center top;
+     height: 400px;
+}

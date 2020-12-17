@@ -155,22 +155,7 @@ padding-top: 30px;
 .banner-main .carousel-caption p  {font-size: 17px; padding: 10px 0px 20px 0px;}
 .banner-main .carousel-caption .buynow {width: 149px; padding: 7px 0;}
 ul.social_icon {display: none !important;}
-    .about {background: inherit;}
-   .about .about_box {
-    padding-top: 0px;
-   }
-.about .about_box span {font-size: 44px;}
-.about_img {
 
-    margin-top: 30px;
-
-}
-.about_box_ span {font-size: 44px;}
-.testomonial_section {
-
-    padding: 0 91px;
-
-}
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -186,11 +171,6 @@ ul.social_icon {display: none !important;}
 .titlepage h2 {
 font-size: 42px; 
 }
-.about .about_box_ { margin-bottom: 30px; }
-
-
-
-.about {background: inherit;}
 .mrgn {margin-top: 0px;}
     .img-box {display: none;}
     ul.link li {
@@ -219,15 +199,11 @@ font-size: 42px;
 .banner-main .carousel-caption p  {display: none;}
 .banner-main .carousel-caption .buynow {width: 149px; padding: 7px 0;}
 .titlepage h2 {font-size: 32px;}
-.about .about_box span {font-size: 33px; line-height: 53px;}
 .mrgn {margin-top: 30px;}
 .footer .headinga span {
 font-size: 16px;
 
 }
-.about .about_box_ { margin-bottom: 30px; }
-.about .about_box_ span {font-size: 33px; line-height: 53px;}
-.about {background: inherit;}
 .testomonial_section {padding: 0px;}
 .cross_inner {transform: inherit;}
 .cross_layout {transform: inherit;}
