@@ -10,91 +10,51 @@ Class Colis
  const  CHC= 15000;
  const   GT= 2000;
  const   SCC= 75;
-    public function __construct($poids, $compagnie, $destination)
-    {
-        $this->poids= $poids;
-        $this->compagnie= $compagnie;
-        $this->destination= $destination;
-        
-    }
-    public function getPoids()
-    {
-        return $this->poids;
-    }
-    public function getCompagnie()
-    {
-        return $this->compagnie;
-    }
-    public function getDestination()
-    {
-        return $this->destination;
-    }
     
-
-/*setters*/
-    public function setPoids()
-    {
-        $this->poids= $poids;
-    }
-    public function setCompagnie()
-    {
-        $this->compagnie= $compagnie;
-    }
-    public function setDestination()
-    {
-        $this->destination= $destination;
-    }
-    
-   public function tarif_ht()
+   public function tarif_ht($compagnie)
    {
        $tarif_ht=0;
        
-       if($this->compagnie !="aire senegal"){
-                return $tarif_ht=60000;
+       if($compagnie==1){
+                $tarif_ht=50000;
+                return $tarif_ht;
        }
-       else if($this->compagnie !="aire france"){
-        return $tarif_ht=50000;
+       else if($compagnie==2){
+              $tarif_ht=60000;
+              return $tarif_ht;
        }
        else
            return $tarif_ht;
 
    }
 
-   public function tarif_tx()
+   public function tarif_tx($poids)
    {
-       return $tarif_tx=self::CGC+ self::GE+ self::CHC+ self::GT+ self::TX*$this->poids+ self::SCC*$this->poids;
+       $tarif_tx=self::CGC+ self::GE+ self::CHC+ self::GT+ self::TX*$poids+ self::SCC*$poids;
+       return $tarif_tx;
    }
-   public function tarif_ttc()
+   public function tarif_ttc($compagnie, $poids)
    {
-     $tarif_ttc= 0;
-     if($this->compagnie = "aire senegal")
-     {
-       $tarif_ttc=50000+self::CGC+ self::GE+ self::CHC+ self::GT+ self::TX*$this->poids+ self::SCC*$this->poids;
-       return $tarif_ttc;
-    }
-     else
-      {
-        $tarif_ttc=60000+self::CGC+ self::GE+ self::CHC+ self::GT+ self::TX*$this->poids+ self::SCC*$this->poids;
-        return $tarif_tcc;
-      }
+      return $this->tarif_ht($compagnie)+$this->tarif_tx($poids);
 
    }
-   public function pays()
+   /*public function pays()
    {
        require 'connexion.php';
        $liste= $bdd->query('SELECT DISTINCT(pays) FROM destinations ');
-       while($list_pays=$liste->fetch()){
-             return $list_pays['pays'];
+       while($pays=$liste->fetch()){
+             return $liste_pays=json_encode($pays);
        }
+       //return $pays=json_encode($liste->fetch());
        $liste->closeCursor();
    }
   public function aeroport()
    {
         require 'connexion.php';
         $liste= $bdd->query("SELECT aeroport, pays FROM destinations WHERE pays='$this->destination'") or die(print_r($bdd->errorInfo()));
-        while($list_pays=$liste->fetch()){
-           return $list_pays['aeroport'] ;
+        while($aeroports=$liste->fetch()){
+           return $list_aeroports= json_encode($aeroports['aeroport']) ;
         }
         $liste->closeCursor();
-    }
+    }*/
 }
