@@ -67,6 +67,27 @@ $("#input-poids, #select-type, #select-pays, #select-aeroport, #select-compagnie
 		$('#prix-tx').text(poidsColis * 15);
 		$('#prix-scc').text(poidsColis * 75);
 		$('#table-tarif').slideDown();
+
+		var param = {"fonction":"tarif_ht", "compagnie": compagnie};
+		$.post('colis.php', param, function(data)
+		{
+		    $('#prix-ht').text(data);
+		});
+		var param = {"fonction":"tarif_ttc", "compagnie": compagnie, "poids": poidsColis};
+		$.post('colis.php', param, function(data)
+		{
+		    $('#prix-ttc').text(data);
+		});
+
 	}
+
+
+
+	
+
+
+
+
+
 
 });

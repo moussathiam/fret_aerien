@@ -1,43 +1,47 @@
 <?php
-Class Colis
-{
- protected $poids;
- protected $compagnie;
- protected $destination;
- const CGC= 1250;
- const TX= 15;
- const  GE= 1260;
- const  CHC= 15000;
- const   GT= 2000;
- const   SCC= 75;
-    
-   public function tarif_ht($compagnie)
+  $_POST["fonction"]();
+
+    function tarif_ht()
    {
+      $compagnie = $_POST["compagnie"];
        $tarif_ht=0;
-       
-       if($compagnie==1){
-                $tarif_ht=50000;
-                return $tarif_ht;
-       }
-       else if($compagnie==2){
-              $tarif_ht=60000;
-              return $tarif_ht;
-       }
-       else
-           return $tarif_ht;
-
+      if($compagnie==1)
+      {
+          $tarif_ht=50000;
+          echo $tarif_ht;
+      }
+      if($compagnie==2)
+      {
+       $tarif_ht=60000;
+          echo $tarif_ht;
+      }
    }
 
-   public function tarif_tx($poids)
-   {
-       $tarif_tx=self::CGC+ self::GE+ self::CHC+ self::GT+ self::TX*$poids+ self::SCC*$poids;
-       return $tarif_tx;
-   }
-   public function tarif_ttc($compagnie, $poids)
-   {
-      return $this->tarif_ht($compagnie)+$this->tarif_tx($poids);
+  function tarif_ttc()
+  {
+    $poids = $_POST["poids"];
+     $compagnie = $_POST["compagnie"];
+        $CGC= 1250;
+        $TX= 15;
+        $GE= 1260;
+        $CHC= 15000;
+        $GT= 2000;
+        $SCC= 75;
+       $tarif_tx = $CGC + $GE + $CHC + $GT + $TX*$poids + $SCC*$poids;
 
-   }
+       $tarif_ht=0;
+      if($compagnie==1)
+      {
+          $tarif_ht=50000;
+      }
+      if($compagnie==2)
+      {
+        $tarif_ht=60000;
+      }
+    echo $tarif_ht +  $tarif_tx;
+  }
+
+  
    /*public function pays()
    {
        require 'connexion.php';
@@ -57,4 +61,3 @@ Class Colis
         }
         $liste->closeCursor();
     }*/
-}

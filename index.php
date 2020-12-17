@@ -209,7 +209,7 @@
                           <tbody>
                             <tr class="tr-total-ht">
                               <td class="tab-bold total" colspan="2">PRIX HT</td>
-                              <td class="tab-bold somme">16 500<sup> FCFA</sup></td>
+                              <td class="tab-bold somme"><soan id="prix-ht"></soan><sup> FCFA</sup></td>
                             </tr>
                             <tr>
                               <td class="tab-bold">TX</td>
@@ -243,7 +243,7 @@
                             </tr>
                              <tr class="tr-total-ttc">
                               <td class="tab-bold total" colspan="2">TOTAL TTC</td>
-                              <td class="tab-bold somme">16 500<sup> FCFA</sup></td>
+                              <td class="tab-bold somme"><soan id="prix-ttc"></soan><sup> FCFA</sup></td>
                             </tr>
                           </tbody>
                         </table>
