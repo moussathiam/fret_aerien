@@ -29,13 +29,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/dropdown.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
 
 
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" />
+<link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
 
 
 
@@ -133,13 +132,13 @@
                                <input type="number" class="form-control" id="input-poids" placeholder="Poids">
                             </div>
                             <div class="form-group col-sm-6">
-                                <select class="form-control selectpicker" id="select-type">
-                                    <option data-tokens="china" value="0">Type de colis</option>
-                                    <option data-tokens="malayasia" value="1">Effets personels</option>
-                                    <option data-tokens="singapore" value="2">Périssables</option>
-                                    <option data-tokens="malayasia" value="1">Animaux vivant</option>
-                                    <option data-tokens="singapore" value="2">Valeurs</option>
-                                    <option data-tokens="malayasia" value="1">Dépouille mortelle</option>
+                                <select class="form-control" id="select-type">
+                                    <option value="0">Type de colis</option>
+                                    <option value="1">Effets personels</option>
+                                    <option value="2">Périssables</option>
+                                    <option value="1">Animaux vivant</option>
+                                    <option value="2">Valeurs</option>
+                                    <option value="1">Dépouille mortelle</option>
                                 </select>
                             </div>
                         </div>
@@ -149,18 +148,16 @@
                                 <label for="email"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> DESTINATION</label>
                             </div>
                             <div class="form-group col-sm-6" >
-                                <select class="form-control selectpicker" id="select-pays" data-live-search="true">
-                                    <option data-tokens="china" value="0">Pays</option>
-                                    <option data-tokens="malayasia" value="1">Malayasia</option>
-                                    <option data-tokens="singapore" value="2">Singapore</option>
+                                <select class="form-control" id="select-pays">
+                                    <option value="0">Pays</option>
                                 </select>
                             </div>
                             <div class="form-group col-sm-6" >
-                                <select class="form-control selectpicker" id="select-aeroport" data-live-search="true">
+                                <select class="form-control" id="select-aeroport" data-live-search="true">
                                     <option data-tokens="china" value="0">Aéroport</option>
-                                    <option data-tokens="malayasia" value="1">Malayasia</option>
-                                    <option data-tokens="singapore" value="2">Singapore</option>
-                                </select>
+                                        <span id="select-aeroport-span">
+                                        </span>
+                                   </select>
                             </div>
                         </div>
 
@@ -308,7 +305,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/dropdown.js"></script>
     <script src="js/plugin.js"></script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -317,7 +314,7 @@
     <script src="js/owl.carousel.js"></script>
     <!--   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>-->
     <!-- me select search -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <script src="vendor/select2/dist/js/select2.min.js"></script>
     <script src="js/fonctions.js"></script>
 </body>
 

@@ -41,23 +41,23 @@
     echo $tarif_ht +  $tarif_tx;
   }
 
-  
-   /*public function pays()
+
+  function pays()
    {
-       require 'connexion.php';
-       $liste= $bdd->query('SELECT DISTINCT(pays) FROM destinations ');
-       while($pays=$liste->fetch()){
-             return $liste_pays=json_encode($pays);
-       }
+      require 'connexion.php';
+      $liste= $bdd->query('SELECT DISTINCT(pays) FROM destinations ');
+      $pays=$liste->fetchAll();
+      echo json_encode($pays);
+       
        //return $pays=json_encode($liste->fetch());
        $liste->closeCursor();
    }
-  public function aeroport()
+  
+   function aeroport()
    {
-        require 'connexion.php';
-        $liste= $bdd->query("SELECT aeroport, pays FROM destinations WHERE pays='$this->destination'") or die(print_r($bdd->errorInfo()));
-        while($aeroports=$liste->fetch()){
-           return $list_aeroports= json_encode($aeroports['aeroport']) ;
-        }
-        $liste->closeCursor();
-    }*/
+      $pays = $_POST["pays"];
+      require 'connexion.php';
+      $liste= $bdd->query("SELECT aeroport, pays FROM destinations WHERE pays = '$pays'") or die(print_r($bdd->errorInfo()));
+      echo json_encode($liste->fetchAll());
+      $liste->closeCursor();
+    }

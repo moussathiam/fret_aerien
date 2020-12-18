@@ -2086,15 +2086,19 @@ ul.location_icon span {
      color: #0066b3;
      font-weight: 600;
 }
-.simulateur form > fieldset > div > input:focus
+.simulateur form > fieldset > div > div > .select2
 {
-     border: 2px solid #ccf!important;
-     box-shadow: none;
+     height: 36px!important;
+     width: 100%!important;
+     background-color: white!important;
+     border: 1px solid #ccc!important;
+     border-radius: 5px;
+     font-size: 17px;
 }
-.simulateur form > fieldset > div > select:focus
+.select2-container .select2-selection--single .select2-selection__rendered
 {
-     border: 2px solid #ccf!important;
-     box-shadow: none;
+     height: 30px!important;
+     background-color: white!important;
 }
 /************************************************FIN SIMULATEUR*******/
 
@@ -2131,7 +2135,9 @@ ul.location_icon span {
 }
 .simulateur table tr td
 {
-     padding: 15px;
+     height: 35px!important;
+     padding-top: 6px;
+     padding-bottom: 3px;
 }
 .simulateur table tr td:first-child
 {
@@ -2188,17 +2194,6 @@ ul.location_icon span {
 {
      box-shadow: 0px 0px 10px 2px black;
      background-color: #0000ff
-}
-select
-{
-     border: 1px solid red !important;
-     height: 35px !important;
-}
-
-select .dropdown-toggle:focus {
-    outline: none!important;
-    outline: none!important;
-    outline-offset: 0px;
 }
 /************************************************FIN RESULTAT*******/
 
