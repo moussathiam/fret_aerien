@@ -2081,6 +2081,16 @@ ul.location_icon span {
      border-radius: 5px;
      background-color: #fafaff;
 }
+.simulateur form .sub-div > div .i-right
+{
+     position: absolute;
+     right: 10px;
+}
+.simulateur form .sub-div > div .i-right .fas
+{
+     color: #5a5!important;
+      font-size: 20px;
+}
 .simulateur form .sub-div > div > label
 {
      color: #0066b3;
@@ -2094,6 +2104,7 @@ ul.location_icon span {
      border: 1px solid #ccc!important;
      border-radius: 5px;
      font-size: 17px;
+
 }
 .select2-container .select2-selection--single .select2-selection__rendered
 {

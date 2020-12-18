@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
      <link rel="stylesheet" href="css/dropdown.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 
 
@@ -72,10 +73,10 @@
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a> </li>
-                                        <li> <a href="index.php"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Similateur de tarif</a> </li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> A propos</a></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contacter nous</a></li>
+                                        <li class="active"> <a href="index.php"><i class="fas fa-home"></i> Accueil</a> </li>
+                                        <li> <a href="index.php"><i class="fas fa-chart-bar"></i> Similateur de tarif</a> </li>
+                                        <li><a href="#"><i class="fas fa-info-circle"></i> A propos</a></li>
+                                        <li><a href="#"><i class="fas fa-phone-alt"></i> Contacter nous</a></li>
                                         <li class="last">
                                             <a href="#"><img src="images/search_icon.png" alt="icon" /></a>
                                         </li>
@@ -126,10 +127,11 @@
 
                         <div class="row sub-div" id="colis">
                             <div class="col-sm-12">
-                                 <label for="nom"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> COLIS</label>
+                                <label for="nom"><i class="fas fa-paper-plane"></i> COLIS</label>
+                                <label class="i-right" id="ok-colis"><i class="fas fa-check"></i></label>
                             </div>
                             <div class="form-group col-sm-6" >
-                               <input type="number" class="form-control" id="input-poids" placeholder="Poids">
+                               <input type="number" min="0" class="form-control" id="input-poids" placeholder="Poids">
                             </div>
                             <div class="form-group col-sm-6">
                                 <select class="form-control" id="select-type">
@@ -145,7 +147,8 @@
 
                         <div class="row sub-div" id="destination">
                             <div class="col-sm-12">
-                                <label for="email"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> DESTINATION</label>
+                                <label for="email"><i class="fas fa-map-marker-alt"></i> DESTINATION</label>
+                                <label class="i-right" id="ok-destination"><i class="fas fa-check"></i></label>
                             </div>
                             <div class="form-group col-sm-6" >
                                 <select class="form-control" id="select-pays">
@@ -155,15 +158,14 @@
                             <div class="form-group col-sm-6" >
                                 <select class="form-control" id="select-aeroport" data-live-search="true">
                                     <option data-tokens="china" value="0">Aéroport</option>
-                                        <span id="select-aeroport-span">
-                                        </span>
-                                   </select>
+                                </select>
                             </div>
                         </div>
 
                      <div class="row sub-div" id="compagnie">
                         <div class="col-sm-12">
-                            <label for="email"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span> COMPAGNIE</label>
+                            <label for="email"><i class="fas fa-plane-departure"></i> COMPAGNIE</label>
+                            <label class="i-right" id="ok-compagnie"><i class="fas fa-check"></i></label>
                         </div>
                         <div class="form-group col-sm-12">
                             <select class="form-control selectpicker" id="select-compagnie" data-live-search="true">
@@ -245,7 +247,7 @@
                           </tbody>
                         </table>
                         <div class="div-button" id="btn-tarif">
-                            <button type="button" class="btn btn-primary">Commander <span class="glyphicon glyphicon-share" aria-hidden="true"></span></button>
+                            <button type="button" class="btn btn-primary">Commander <i class="fas fa-share-square"></i></button>
                         </div>
 
 
