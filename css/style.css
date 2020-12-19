@@ -2063,6 +2063,11 @@ ul.location_icon span {
      margin-bottom: 20px;
      box-shadow: 0px 0px 10px 1px #aaa;
 }
+
+.simulateur form input:focus, .simulateur form select:focus
+{
+     box-shadow: none;
+}
 .simulateur form legend
 {
      background-color: #0066b3;
@@ -2081,6 +2086,19 @@ ul.location_icon span {
      border-radius: 5px;
      background-color: #fafaff;
 }
+
+/***ZOMM FORMULAIRE***/
+.simulateur .sub-div:hover {
+/* L'image est grossie de 25% */
+-webkit-transform:scale(1.02); /* Safari et Chrome */
+-moz-transform:scale(1.02); /* Firefox */
+-ms-transform:scale(1.02); /* Internet Explorer 9 */
+-o-transform:scale(1.02); /* Opera */
+transform:scale(1.02);
+}
+
+
+
 .simulateur form .sub-div > div .i-right
 {
      position: absolute;
@@ -2111,6 +2129,38 @@ ul.location_icon span {
      height: 30px!important;
      background-color: white!important;
 }
+
+
+#block-load
+{
+     margin-bottom: -5px;
+     margin-right: 20px;
+     margin-left: 20px;
+}
+#block-load .sub-block-load
+{
+     display: inline-block;
+     height: 8px;
+     width: calc(33.33% - 2px)!important;
+     margin: 0px;
+     padding: 0px;
+     margin-right: 1px;
+     margin-left: 1px;
+     border-radius: 10px;
+     box-shadow: 0px 0px 5px 1px #d5d5da;
+     border: 1px solid #5a5;
+     background-color: #ddd;
+}
+
+#block-load .load  
+{
+     height: 6px;
+     margin: 0px;
+     border-radius: 10px;
+     background-color: #40e013;
+     width: 0px;
+}
+
 /************************************************FIN SIMULATEUR*******/
 
 /************************************************RESULTAT*******/
@@ -2118,6 +2168,15 @@ ul.location_icon span {
 {
      padding: 0px!important;
      min-height: 450px;
+}
+/***ZOMM RESULTAT***/
+.canva-resultat:hover .resultat {
+/* L'image est grossie de 25% */
+-webkit-transform:scale(1.02); /* Safari et Chrome */
+-moz-transform:scale(1.02); /* Firefox */
+-ms-transform:scale(1.02); /* Internet Explorer 9 */
+-o-transform:scale(1.02); /* Opera */
+transform:scale(1.02);
 }
 .resultat
 {
@@ -2153,6 +2212,11 @@ ul.location_icon span {
 .simulateur table tr td:first-child
 {
      text-align: left;
+}
+.simulateur table tr td acronym
+{
+     text-decoration: none;
+     cursor: pointer;
 }
 .simulateur table tr td:last-child
 {

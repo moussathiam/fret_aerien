@@ -12,7 +12,7 @@ var poidsColis = 0,
 	compagnie = 0,
 	ok1 = 0, ok2 = 0, ok3 = 0;
 
-
+	
 	var param = {"fonction":"pays"};
 	$.post('colis.php', param, function(data)
 	{
@@ -23,25 +23,37 @@ var poidsColis = 0,
 	    $('#select-pays').select2();
 	});
 
+$("#input-poids").keyup(function(){
+	changeColis();
+	afficheTab();
+});
 $("#input-poids, #select-type").change(function(){
+	$("#load-colis").animate({width: "0px"});
+	changeColis();
+});
+
+function changeColis()
+{
 	$('#table-tarif').hide();
 	$('#ok-colis').hide();
 	$('#image-colis').show();
 	poidsColisTxt = $('#input-poids').val();
 	typeColisTxt = $('#select-type').val();
-	if (poidsColisTxt != '')
-	poidsColis = parseInt(poidsColisTxt);
-	if (typeColisTxt != '')
-	typeColis = parseInt(typeColisTxt);
 	ok1 = 0;
-	if((poidsColis > 0) && (typeColis > 0))
+	if (poidsColisTxt != '')
 	{
-		ok1 = 1;
-		$('#ok-colis').fadeIn("slow");
-		$('#destination').slideDown();
+		poidsColis = parseInt(poidsColisTxt);
+		if (typeColisTxt != '')
+		typeColis = parseInt(typeColisTxt);
+		if((poidsColis > 0) && (typeColis > 0))
+		{
+			ok1 = 1;
+			$('#ok-colis').fadeIn("slow");
+			$("#load-colis").animate({width: "100%"});
+			$('#destination').slideDown();
+		}
 	}
-});
-
+}
 
 $("#select-pays").change(function(){
 	paysDestination = $('#select-pays').val();
@@ -55,6 +67,7 @@ $("#select-pays").change(function(){
 		   option = option + '<option value="'+aeroport[i][0]+'">'+aeroport[i][0]+'</option>';
 		}
 		$('#select-aeroport').html(option);
+		jQuery(document).ready(function($) { $('#select-pays').click(); }); 
 	});
 });
 
@@ -63,6 +76,7 @@ $("#select-pays").change(function(){
 $("#select-pays, #select-aeroport").change(function(){
 	$('#table-tarif').hide();
 	$('#ok-destination').hide();
+	$("#load-destination").animate({width: "0px"});
 	$('#image-colis').show();
 	paysDestination = $('#select-pays').val();
 	aeroportDestination = $('#select-aeroport').val();
@@ -72,6 +86,7 @@ $("#select-pays, #select-aeroport").change(function(){
 	{
 		ok2 = 1;
 		$('#ok-destination').fadeIn("slow");
+		$("#load-destination").animate({width: "100%"});
 		$('#compagnie').slideDown();
 	}
 });
@@ -79,6 +94,7 @@ $("#select-pays, #select-aeroport").change(function(){
 $("#select-compagnie").change(function(){
 	$('#table-tarif').hide();
 	$('#ok-compagnie').hide();
+	$("#load-compagnie").animate({width: "0px"});
 	$('#image-colis').show();
 	compagnieTxt = $('#select-compagnie').val();
 	if (compagnieTxt != '')
@@ -87,6 +103,7 @@ $("#select-compagnie").change(function(){
 	if(compagnie > 0)
 	{
 		$('#ok-compagnie').fadeIn("slow");
+		$("#load-compagnie").animate({width: "100%"});
 		ok3 = 1;
 	}
 });
@@ -95,38 +112,36 @@ $("#select-compagnie").change(function(){
 
 
 $("#input-poids, #select-type, #select-pays, #select-aeroport, #select-compagnie").change(function(){
-	if(ok1 && ok2 && ok3)
-	{
-		$('#image-colis').hide();
-		$('#prix-tx').text(poidsColis * 15);
-		$('#prix-scc').text(poidsColis * 75);
-		$('#table-tarif').slideDown();
-
-		var param = {"fonction":"tarif_ht", "compagnie": compagnie};
-		$.post('colis.php', param, function(data)
-		{
-			var totalHt = parseInt(data);
-			var totalHtForamat = new Intl.NumberFormat("fr-FR").format(totalHt);
-		    $('#prix-ht').text(totalHtForamat);
-		});
-		var param = {"fonction":"tarif_ttc", "compagnie": compagnie, "poids": poidsColis};
-		$.post('colis.php', param, function(data)
-		{
-			var totalTtc = parseInt(data);
-			var totalTtcForamat = new Intl.NumberFormat("fr-FR").format(totalTtc);
-		    $('#prix-ttc').text(totalTtcForamat);
-		});
-
-		
-	}
-
-
-
-	
-
-
-
-
-
-
+	afficheTab();
 });
+
+
+	function afficheTab()
+	{
+		if(ok1 && ok2 && ok3)
+		{
+			setTimeout(function()
+			{
+				$('#table-tarif').slideDown();
+				$('#image-colis').hide(); 
+			}, 500);
+
+			$('#prix-tx').text(poidsColis * 15);
+			$('#prix-scc').text(poidsColis * 75);
+			
+			var param = {"fonction":"tarif_ht", "compagnie": compagnie};
+			$.post('colis.php', param, function(data)
+			{
+				var totalHt = parseInt(data);
+				var totalHtForamat = new Intl.NumberFormat("fr-FR").format(totalHt);
+			    $('#prix-ht').text(totalHtForamat);
+			});
+			var param = {"fonction":"tarif_ttc", "compagnie": compagnie, "poids": poidsColis};
+			$.post('colis.php', param, function(data)
+			{
+				var totalTtc = parseInt(data);
+				var totalTtcForamat = new Intl.NumberFormat("fr-FR").format(totalTtc);
+			    $('#prix-ttc').text(totalTtcForamat);
+			});
+		}
+	}

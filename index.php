@@ -74,7 +74,7 @@
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="index.php"><i class="fas fa-home"></i> Accueil</a> </li>
-                                        <li> <a href="index.php"><i class="fas fa-chart-bar"></i> Similateur de tarif</a> </li>
+                                        <li> <a href="index.php"><i class="fas fa-calculator"></i> Similateur de tarif</a> </li>
                                         <li><a href="#"><i class="fas fa-info-circle"></i> A propos</a></li>
                                         <li><a href="#"><i class="fas fa-phone-alt"></i> Contacter nous</a></li>
                                         <li class="last">
@@ -116,14 +116,24 @@
     <section class="simulateur">
         <div class="container">
             <div class="row">
+
                 <div class="col-sm-7">
-                  
-
-
-
-                <form>
+                <form name="formSimulation">
                     <fieldset>
                         <legend>SIMULATION DE PRIX</legend>
+
+                        <div id="block-load" class="row">
+                            <div class="sub-block-load">
+                                <div id="load-colis" class="load"></div>
+                            </div>
+                            <div class="sub-block-load">
+                                <div id="load-destination" class="load"></div>
+                            </div>
+                            <div class="sub-block-load">
+                                <div id="load-compagnie" class="load"></div>
+                            </div>
+                        </div>
+
 
                         <div class="row sub-div" id="colis">
                             <div class="col-sm-12">
@@ -131,10 +141,10 @@
                                 <label class="i-right" id="ok-colis"><i class="fas fa-check"></i></label>
                             </div>
                             <div class="form-group col-sm-6" >
-                               <input type="number" min="0" class="form-control" id="input-poids" placeholder="Poids">
+                               <input type="number" name="poids" min="0" class="form-control" id="input-poids" placeholder="Poids">
                             </div>
                             <div class="form-group col-sm-6">
-                                <select class="form-control" id="select-type">
+                                <select class="form-control success" id="select-type">
                                     <option value="0">Type de colis</option>
                                     <option value="1">Effets personels</option>
                                     <option value="2">Périssables</option>
@@ -199,7 +209,7 @@
 
 
                 </div>
-                 <div class="col-sm-4">
+                 <div class="col-sm-5">
                     <div class="canva-resultat">
                     <div id="image-colis"><img src="images/colis.jpg"></div>
                     <div class="resultat" id="table-tarif">
@@ -207,41 +217,41 @@
                         <table class="table">
                           <tbody>
                             <tr class="tr-total-ht">
-                              <td class="tab-bold total" colspan="2">PRIX HT</td>
+                              <td class="tab-bold total" colspan="2"><acronym title="Prix hors taxe">PRIX HT</acronym></td>
                               <td class="tab-bold somme"><soan id="prix-ht"></soan><sup> FCFA</sup></td>
                             </tr>
                             <tr>
-                              <td class="tab-bold">TX</td>
+                              <td class="tab-bold"><acronym title="Taxe">TX</acronym></td>
                               <td>15<sup> FCFA</sup>/KG</td>
                               <td class="tab-bold"><soan id="prix-tx"></soan><sup> FCFA</sup></td>
                             </tr>
                             <tr>
-                              <td class="tab-bold">SCC</td>
+                              <td class="tab-bold"><acronym title="">SCC</acronym></td>
                               <td>75<sup> FCFA</sup>/KG</td>
                               <td class="tab-bold"><soan id="prix-scc"></soan><sup> FCFA</sup></td>
                             </tr>
                             <tr>
-                              <td class="tab-bold">CGC</td>
+                              <td class="tab-bold"><acronym title="">CGC</acronym></td>
                               <td>1 250<sup> FCFA</sup></td>
                               <td class="tab-bold">1 250<sup> FCFA</sup></td>
                             </tr>
                              <tr>
-                              <td class="tab-bold">GE</td>
+                              <td class="tab-bold"><acronym title="">GE</acronym></td>
                               <td>1 260<sup> FCFA</sup></td>
                               <td class="tab-bold">1 260<sup> FCFA</sup></td>
                             </tr>
                              <tr>
-                              <td class="tab-bold">CHC</td>
+                              <td class="tab-bold"><acronym title="">CHC</acronym></td>
                               <td>15 000<sup> FCFA</sup></td>
                               <td class="tab-bold">15 000<sup> FCFA</sup></td>
                             </tr>
                              <tr>
-                              <td class="tab-bold">GT</td>
+                              <td class="tab-bold"><acronym title="">GT</acronym></td>
                               <td>2 000<sup> FCFA</sup></td>
                               <td class="tab-bold">2 000<sup> FCFA</sup></td>
                             </tr>
                              <tr class="tr-total-ttc">
-                              <td class="tab-bold total" colspan="2">TOTAL TTC</td>
+                              <td class="tab-bold total" colspan="2"><acronym title="Total tout taxe compris">TOTAL TTC</acronym></td>
                               <td class="tab-bold somme"><soan id="prix-ttc"></soan><sup> FCFA</sup></td>
                             </tr>
                           </tbody>
