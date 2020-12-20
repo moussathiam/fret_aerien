@@ -2258,12 +2258,15 @@ transform:scale(1.02);
 .simulateur .div-button .btn
 {
      background-color: #0066b3;
-     width: 50%;
+     border-radius: 0px;
+     border: none;
+     width: 100%;
+     box-shadow: 1px 1px 2px #aaa, 0 0 1em #aaa, 0 0 0.2em #aaa;
 }
 .simulateur .div-button .btn:hover
 {
      box-shadow: 0px 0px 10px 2px #aaa;
-     background-color: #0066c3;
+     background-color: #0000ff;
 }
 .simulateur .div-button .btn:focus
 {
