@@ -2161,6 +2161,18 @@ transform:scale(1.02);
      width: 0px;
 }
 
+.div-effacer
+{
+     margin: 20px;
+}
+.div-effacer>span
+{
+     position: absolute;
+     right: 40px;
+     cursor: pointer;
+}
+
+
 /************************************************FIN SIMULATEUR*******/
 
 /************************************************RESULTAT*******/

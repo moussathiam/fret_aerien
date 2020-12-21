@@ -145,3 +145,42 @@ $("#input-poids, #select-type, #select-pays, #select-aeroport, #select-compagnie
 			});
 		}
 	}
+
+
+
+$('#btn-effacer').click(function(){
+	$('#input-poids').val('');
+	$('#select-type').val('0');
+	$('#select-pays').removeClass("slect2");
+	$('#select-pays').val('0');
+	$('#select-pays').select2();
+	$('#select-aeroport').val('0');
+	$('#select-compagnie').val('0');
+
+	$('#table-tarif').hide();
+	$('#image-colis').show();
+	
+	$('#compagnie').slideUp();
+	setTimeout(function()
+	{
+		$('#destination').slideUp();
+	}, 500);
+	
+	$('#ok-colis').hide();
+	$('#ok-destination').hide();
+	$('#ok-compagnie').hide();
+
+	$("#load-compagnie").animate({width: "0px"});
+	setTimeout(function()
+	{
+		$("#load-destination").animate({width: "0px"});
+	}, 500);
+	setTimeout(function()
+	{
+		$("#load-colis").animate({width: "0px"});
+	}, 1000);
+	
+	ok1 = 0;
+	ok2 = 0; 
+	ok3 = 0;
+});

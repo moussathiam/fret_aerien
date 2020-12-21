@@ -185,23 +185,9 @@
                             </select>
                         </div>
                      </div>
-               <!--      
-                     <div class="form-group">
-                       <label for="selection">Une liste select</label>
-                       <select id="selection" class="form-control">
-                         <option value="">Liste de choix...</option>
-                         <optgroup label="Groupe d'options 1">
-                           <option value="">Option 1</option>
-                           <option value="">Option 2</option>
-                           <option value="">Option 3</option>
-                         </optgroup>
-                         <optgroup label="Groupe d'options 2">
-                           <option value="">Option 4</option>
-                           <option value="">Option 5</option>
-                         </optgroup>
-                       </select>
+                     <div class="row div-effacer">
+                         <span id="btn-effacer"><sapn class="fas fa-long-arrow-alt-left"></sapn> éffacer</span>
                      </div>
-                -->
                     </fieldset>
                 </form>
 
